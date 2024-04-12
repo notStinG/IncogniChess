@@ -1,4 +1,4 @@
-## Importing pygame
+    ## Importing pygame
 import pygame
 
 ## Initialise pygame and display
@@ -23,7 +23,7 @@ piece_select = 420
 
 ## Validity of piece movement
 valid_moves = []
-
+    
 ## Castling validity
 castling_moves = [] 
 
@@ -34,14 +34,14 @@ castling_moves = []
 w_pieces = ["Rook", "Knight", "Bishop", "Queen", "King", "Bishop", "Knight", "Rook",
                 "Pawn", "Pawn", "Pawn", "Pawn", "Pawn", "Pawn", "Pawn", "Pawn"]
 w_locations = [(0, 7), (1, 7), (2, 7), (3, 7), (4, 7), (5, 7), (6, 7), (7, 7),
-                   (0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6), (7, 6)]
+                (0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6), (7, 6)]
 w_moved = [False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False]
 
 ## Black
 b_pieces = ["Rook", "Knight", "Bishop", "Queen", "King", "Bishop", "Knight", "Rook",
                 "Pawn", "Pawn", "Pawn", "Pawn", "Pawn", "Pawn", "Pawn", "Pawn"]
 b_locations = [(0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0),
-                   (0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
+                (0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
 b_moved = [False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False]
 
 ## Captured pieces
@@ -55,44 +55,44 @@ game_over = False
 ## Image Loading to the pieces
 
 ## Black pieces
-b_queen = pygame.image.load("assets/bq.png")
-b_queen = pygame.transform.scale(b_queen, (80, 80))
-b_queen_small = pygame.transform.scale(b_queen, (45, 45))
-b_king = pygame.image.load("assets/bk.png")
-b_king = pygame.transform.scale(b_king, (80, 80))
-b_king_small = pygame.transform.scale(b_king, (45, 45))
-b_rook = pygame.image.load("assets/br.png")
-b_rook = pygame.transform.scale(b_rook, (80, 80))
-b_rook_small = pygame.transform.scale(b_rook, (45, 45))
-b_bishop = pygame.image.load("assets/bb.png")
-b_bishop = pygame.transform.scale(b_bishop, (80, 80))
-b_bishop_small = pygame.transform.scale(b_bishop, (45, 45))
-b_knight = pygame.image.load("assets/bn.png")
-b_knight = pygame.transform.scale(b_knight, (80, 80))
-b_knight_small = pygame.transform.scale(b_knight, (45, 45))
-b_pawn = pygame.image.load("assets/bp.png")
-b_pawn = pygame.transform.scale(b_pawn, (65, 65))
-b_pawn_small = pygame.transform.scale(b_pawn, (45, 45))
+b_queen = pygame.image.load("assets/bqueen.png")
+b_queen = pygame.transform.scale(b_queen, (85, 85))
+b_queen_small = pygame.transform.scale(b_queen, (50, 50))
+b_king = pygame.image.load("assets/bking.png")
+b_king = pygame.transform.scale(b_king, (85, 85))
+b_king_small = pygame.transform.scale(b_king, (50, 50))
+b_rook = pygame.image.load("assets/brook.png")
+b_rook = pygame.transform.scale(b_rook, (85, 85))
+b_rook_small = pygame.transform.scale(b_rook, (50, 50))
+b_bishop = pygame.image.load("assets/bbishop.png")
+b_bishop = pygame.transform.scale(b_bishop, (85, 85))
+b_bishop_small = pygame.transform.scale(b_bishop, (50, 50))
+b_knight = pygame.image.load("assets/bknight.png")
+b_knight = pygame.transform.scale(b_knight, (85, 85))
+b_knight_small = pygame.transform.scale(b_knight, (50, 50))
+b_pawn = pygame.image.load("assets/bpawn.png")
+b_pawn = pygame.transform.scale(b_pawn, (85, 85))
+b_pawn_small = pygame.transform.scale(b_pawn, (50, 50))
 
 ## White pieces
-w_queen = pygame.image.load("assets/wq.png")
-w_queen = pygame.transform.scale(w_queen, (80, 80))
-w_queen_small = pygame.transform.scale(w_queen, (45, 45))
-w_king = pygame.image.load("assets/wk.png")
-w_king = pygame.transform.scale(w_king, (80, 80))
-w_king_small = pygame.transform.scale(w_king, (45, 45))
-w_rook = pygame.image.load("assets/wr.png")
-w_rook = pygame.transform.scale(w_rook, (80, 80))
-w_rook_small = pygame.transform.scale(w_rook, (45, 45))
-w_bishop = pygame.image.load("assets/wb.png")
-w_bishop = pygame.transform.scale(w_bishop, (80, 80))
-w_bishop_small = pygame.transform.scale(w_bishop, (45, 45))
-w_knight = pygame.image.load("assets/wn.png")
-w_knight = pygame.transform.scale(w_knight, (80, 80))
-w_knight_small = pygame.transform.scale(w_knight, (45, 45))
-w_pawn = pygame.image.load("assets/wp.png")
-w_pawn = pygame.transform.scale(w_pawn, (65, 65))
-w_pawn_small = pygame.transform.scale(w_pawn, (45, 45))
+w_queen = pygame.image.load("assets/wqueen.png")
+w_queen = pygame.transform.scale(w_queen, (85, 85))
+w_queen_small = pygame.transform.scale(w_queen, (50, 50))
+w_king = pygame.image.load("assets/wking.png")
+w_king = pygame.transform.scale(w_king, (85, 85))
+w_king_small = pygame.transform.scale(w_king, (50, 50))
+w_rook = pygame.image.load("assets/wrook.png")
+w_rook = pygame.transform.scale(w_rook, (85, 85))
+w_rook_small = pygame.transform.scale(w_rook, (50, 50))
+w_bishop = pygame.image.load("assets/wbishop.png")
+w_bishop = pygame.transform.scale(w_bishop, (85, 85))
+w_bishop_small = pygame.transform.scale(w_bishop, (50, 50))
+w_knight = pygame.image.load("assets/wknight.png")
+w_knight = pygame.transform.scale(w_knight, (85, 85))
+w_knight_small = pygame.transform.scale(w_knight, (50, 50))
+w_pawn = pygame.image.load("assets/wpawn.png")
+w_pawn = pygame.transform.scale(w_pawn, (85, 85))
+w_pawn_small = pygame.transform.scale(w_pawn, (50, 50))
 
 ## Drawing reference for pieces on board
 w_images = [w_pawn, w_queen, w_king, w_knight, w_rook, w_bishop]
@@ -366,7 +366,7 @@ def check_rook(pos, colour):
 def check_knight(pos, colour):
     knight_moves_list = []
 
-     ## Black Knight
+    ## Black Knight
     if colour == "b":
         good = b_locations
         bad = w_locations
@@ -474,7 +474,7 @@ def check_castling():
                 castle = True
                 if rook_locations[x][0] > king_pos[0]:
                     empty_squares = [(king_pos[0] + 1, king_pos[1]), (king_pos[0] + 2, king_pos[1]),
-                                     (king_pos[0] + 3, king_pos[1])]
+                                    (king_pos[0] + 3, king_pos[1])]
                 else:
                     empty_squares = [(king_pos[0] - 1, king_pos[1]), (king_pos[0] - 2, king_pos[1])]
                 for y in range(len(empty_squares)):
@@ -495,7 +495,7 @@ def check_castling():
                 castle = True
                 if rook_locations[aa][0] > king_pos[0]:
                     empty_squares = [(king_pos[0] + 1, king_pos[1]), (king_pos[0] + 2, king_pos[1]),
-                                     (king_pos[0] + 3, king_pos[1])]
+                                    (king_pos[0] + 3, king_pos[1])]
                 else:
                     empty_squares = [(king_pos[0] - 1, king_pos[1]), (king_pos[0] - 2, king_pos[1])]
                 for ab in range(len(empty_squares)):
@@ -515,7 +515,7 @@ def draw_castling(moves):
         screen.blit(font.render("rook", True, "black"),
                     (moves[p][1][0] * 100 + 30, moves[p][1][1] * 100 + 70))
         pygame.draw.line(screen, colour, (moves[p][0][0] * 100 + 50, moves[p][0][1] * 100 + 70),
-                         (moves[p][1][0] * 100 + 50, moves[p][1][1] * 100 + 70), 2)
+                        (moves[p][1][0] * 100 + 50, moves[p][1][1] * 100 + 70), 2)
 
 ## Promoting
 
